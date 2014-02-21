@@ -132,6 +132,7 @@ module NMatrix::BLAS
     # * *Raises* :
     #   - ++ ->
     #
+=begin
     def gemv(a, x, y = nil, alpha = 1.0, beta = 0.0, transpose_a = false, m = nil, n = nil, lda = nil, incx = nil, incy = nil)
       raise(ArgumentError, 'Expected dense NMatrices as first two arguments.') unless a.is_a?(NMatrix) and x.is_a?(NMatrix) and a.stype == :dense and x.stype == :dense
       raise(ArgumentError, 'Expected nil or dense NMatrix as third argument.') unless y.nil? or (y.is_a?(NMatrix) and y.stype == :dense)
@@ -156,6 +157,7 @@ module NMatrix::BLAS
 
       return y
     end
+=end
 
     #
     # call-seq:
